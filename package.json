@@ -1,0 +1,48 @@
+{
+  "name": "@malga/card-validator",
+  "version": "1.6.0",
+  "description": "A simple card validator",
+  "author": "Malga <engineer@malga.io>",
+  "contributors": [
+    "Diego Saouda <diego.saouda@malga.io>",
+    "Eny Martins <eny@malga.io>",
+    "Leonardo Pinheiro <leonardo@malga.io>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plughacker/card-validator/issues"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "private": false,
+  "main": "dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "repository": "git@github.com:plughacker/card-validator.git",
+  "homepage": "https://github.com/plughacker/card-validator#readme",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "test": "vitest --run",
+    "lint": "eslint \"src/**/*.ts\" --fix"
+  },
+  "dependencies": {
+    "card-validator": "^8.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "tsup": "^7.3.0",
+    "typescript": "5.0.4",
+    "vitest": "^0.34.6"
+  }
+}
